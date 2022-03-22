@@ -1,7 +1,7 @@
 import React from "react";
 import {View,StyleSheet,FlatList,StatusBar} from 'react-native'
-import CoinItem from "./src/components/CoinItem/Index";
-import cryptocurrencies from './Crypto Tracker Assets/data/cryptocurrencies.json'
+import CoinDetailedScreen from "./src/screens/HomeScreen/CoinDetailedScreen/Index";
+import HomeScreen from "./src/screens/HomeScreen/Index";
 
 
 
@@ -9,14 +9,9 @@ function App(){
   return(
       <View style={styles.container}>
         <StatusBar />
-           <FlatList
-             data={cryptocurrencies}
-            //  keyExtractor={}
-             renderItem={({item})=> <CoinItem marketCoin={item}/>}
-            
-           
-           />
-           
+        
+          {/* <HomeScreen/> */}
+           <CoinDetailedScreen/>
         </View>
               
   )
